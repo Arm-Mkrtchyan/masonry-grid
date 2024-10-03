@@ -1,13 +1,13 @@
 import { Spinner } from '@/components/spinner'
 import styled from "styled-components";
 
-export const RouteLoading = () => (
-  <RouterLoading>
+export const Loader = () => (
+  <LoaderWrapper>
     <Spinner/>
-  </RouterLoading>
+  </LoaderWrapper>
 )
 
-const RouterLoading = styled.div`
+const LoaderWrapper = styled.div`
     position: fixed;
     top: 0;
     left: 0;

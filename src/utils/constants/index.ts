@@ -1,1 +1,1 @@
-export const IMAGES_API = 'https://api.pexels.com/v1/curated?per_page=20'
+export const IMAGES_API = 'https://api.pexels.com/v1/curated'

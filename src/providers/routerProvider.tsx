@@ -12,6 +12,7 @@ import { RootErrorBoundary } from '@/components/rootErrorBoundary'
 import App from '@/App'
 
 const Home = lazy(async () => await import('../pages/home'))
+const ImagePreview = lazy(async () => await import('../pages/imagePreview'))
 
 type IRoutes = RouteProps[]
 
@@ -19,6 +20,10 @@ export const routes: IRoutes = [
   {
     path: ROUTE_PATHS.HOME,
     element: <Home />
+  },
+  {
+    path: `${ROUTE_PATHS.PREVIEW}/:imageId`,
+    element: <ImagePreview />
   }
 ]
 
