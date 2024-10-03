@@ -1,0 +1,1 @@
+export const IMAGES_API = 'https://api.pexels.com/v1/curated?per_page=20'

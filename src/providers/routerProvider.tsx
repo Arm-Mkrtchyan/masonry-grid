@@ -11,14 +11,14 @@ import ROUTE_PATHS from '@/utils/constants/routes'
 import { RootErrorBoundary } from '@/components/rootErrorBoundary'
 import App from '@/App'
 
-const Dashboard = lazy(async () => await import('../pages/home'))
+const Home = lazy(async () => await import('../pages/home'))
 
 type IRoutes = RouteProps[]
 
 export const routes: IRoutes = [
   {
     path: ROUTE_PATHS.HOME,
-    element: <Dashboard />
+    element: <Home />
   }
 ]
 

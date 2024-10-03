@@ -1,6 +1,8 @@
+import {StyledHeader} from "@/components/header/style.ts";
+
 const Header = () => {
   return (
-    <>Header</>
+    <StyledHeader />
   )
 }
 export default Header
