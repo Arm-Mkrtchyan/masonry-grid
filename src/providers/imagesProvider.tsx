@@ -21,9 +21,9 @@ export const ImagesProvider = ({children}: { children: ReactNode }) => {
   const [previewImage, setPreviewImage] = useState(null);
   const { imageId } = useParams()
   const navigate = useNavigate()
-
+  console.log('images... ', images)
   const handlePreviewImage = (imageId: string) => {
-    const image = images.find(img => img.id == imageId);
+    const image = images.find((img: any) => img.id == imageId);
     if (image) {
       setPreviewImage(image)
     } else {
@@ -32,7 +32,7 @@ export const ImagesProvider = ({children}: { children: ReactNode }) => {
   }
 
   useEffect(() => {
-    fetchData(`${IMAGES_API}?page=2&per_page=20`).then((res) => {
+    fetchData(`${IMAGES_API}?page=3&per_page=20`).then((res: any) => {
       setImages(res.photos)
       setLoading(false)
     }).catch(e => {

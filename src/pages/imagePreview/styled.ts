@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
-export const PreviewImage = styled.div`
+interface PreviewImageProps {
+  $background: string
+}
+
+export const PreviewImage = styled.div<PreviewImageProps>`
     position: relative;
-    height: calc(100vh - 4rem);
-    background-color: rgba(255, 190, 245, 0.5);
+    height: calc(100vh - 6rem);
+    background-color: ${(props: PreviewImageProps) => props.$background};
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding-top: 2rem;
 
     & img {
         max-width: calc(100% - 4rem);
         max-height: calc(100% - 4rem);
         border-radius: 0.4rem;
+        object-fit: contain;
+        object-position: top;
     }
-`
-export const PreviewHeader = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
 `

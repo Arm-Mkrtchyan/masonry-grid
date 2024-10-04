@@ -11,8 +11,8 @@ import ROUTE_PATHS from '@/utils/constants/routes'
 import { RootErrorBoundary } from '@/components/rootErrorBoundary'
 import App from '@/App'
 
-const Home = lazy(async () => await import('../pages/home'))
-const ImagePreview = lazy(async () => await import('../pages/imagePreview'))
+const Home = lazy(async () => await import('@/pages/home'))
+const ImagePreview = lazy(async () => await import('@/pages/imagePreview'))
 
 type IRoutes = RouteProps[]
 

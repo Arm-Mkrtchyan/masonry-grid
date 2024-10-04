@@ -7,6 +7,7 @@ export const Figure = styled.figure`
 
     & img {
         width: 100%;
+        height: 100%;
         max-height: 100%;
         border-radius: 0.4rem;
     }

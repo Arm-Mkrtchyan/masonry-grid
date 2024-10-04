@@ -1,7 +1,14 @@
+import React from "react";
 import { Figure } from "@/components/imageItem/style.ts";
 import {useNavigate} from "react-router-dom";
 
-const ImageItem = ({src, alt, imageId}: {src: string; alt: string; imageId: string}) => {
+interface IProps {
+  src: string;
+  alt: string;
+  imageId: string
+}
+
+const ImageItem = ({src, alt, imageId}:IProps ) => {
   const navigate = useNavigate()
 
   const handleNavigate = () => {
@@ -14,5 +21,5 @@ const ImageItem = ({src, alt, imageId}: {src: string; alt: string; imageId: stri
     </Figure>
   )
 }
-export default ImageItem
+export default React.memo(ImageItem);
 

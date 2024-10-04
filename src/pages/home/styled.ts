@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ImagesContainer = styled.div`
     max-width: 1400px;
+    min-height: 200px;
     margin: 2rem auto ;
     columns: 5;
     gap: 1rem;
