@@ -42,3 +42,19 @@ export const Info = styled.div`
         max-width: calc(100vw - 5rem);
     }
 `
+export const SearchComponent = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 1rem;
+`
+export const SearchInput = styled.input`
+    height: 2rem;
+    width: 18rem;
+    border-radius: 0.2rem;
+    border: none;
+    outline: none;
+    background-color: #ffe0ff;
+    padding: 0 0.6rem;
+`

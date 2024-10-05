@@ -1,21 +1,30 @@
-import {useImages} from "@/providers/imagesProvider.tsx";
+import { useImages } from "@/providers/imagesProvider.tsx";
 import ImageItem from "@/components/imageItem";
-import {ImagesContainer} from "@/pages/home/styled.ts";
+import { EmptyPage, ImagesContainer } from "./styled.ts";
 
 function Home() {
-  const {imageList} = useImages()
+  const { imageList, searchValue } = useImages()
 
   return (
-    <ImagesContainer>
-      { imageList.map(img => (
-        <ImageItem
-          src={ img.src.medium }
-          imageId={ img.id }
-          alt={ img.alt }
-          key={ img.id }
-        />)
-      ) }
-    </ImagesContainer>
+    <>
+      {searchValue && !imageList.length
+        ? <EmptyPage>
+            No images matched your search.
+          </EmptyPage>
+        : <ImagesContainer>
+          {imageList.map(img => (
+            <ImageItem
+              src={img.src.medium}
+              imageId={img.id}
+              width={img.width}
+              height={img.height}
+              alt={img.alt}
+              key={img.id}
+            />)
+          )}
+        </ImagesContainer>
+      }
+    </>
   )
 }
 
