@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Figure } from "@/components/imageItem/style.ts";
+import { Figure } from "./style.ts";
 
 interface IProps {
   src: string;

@@ -1,8 +1,7 @@
-import { Circle, SpinnerWrapper } from "@/components/spinner/styles.ts";
 import { colors } from "@/utils/constants/colors.ts";
+import { Circle, SpinnerWrapper } from "./styles.ts";
 
-
-export const Spinner = () => {
+const Spinner = () => {
   return (
     <SpinnerWrapper>
       <Circle
@@ -29,3 +28,5 @@ export const Spinner = () => {
     </SpinnerWrapper>
   )
 }
+
+export default Spinner

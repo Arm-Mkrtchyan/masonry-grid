@@ -1,5 +1,5 @@
 import { useImages } from "@/providers/imagesProvider.tsx";
-import ImageItem from "@/components/imageItem";
+import { ImageItem } from "@/components";
 import { EmptyPage, ImagesContainer } from "./styled.ts";
 import { IImage } from '@/utils/types'
 

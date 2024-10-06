@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+// Internals
+import { useImages } from "@/providers/imagesProvider.tsx";
 import {
   ImagePreviewDetails,
   StyledHeader,
@@ -8,8 +10,7 @@ import {
   PhotoDescription,
   SearchComponent,
   SearchInput
-} from "@/components/header/style.ts";
-import { useImages } from "@/providers/imagesProvider.tsx";
+} from "./style.ts";
 import BackIcon from '@/assets/backIcon.svg?react'
 
 const Header = () => {

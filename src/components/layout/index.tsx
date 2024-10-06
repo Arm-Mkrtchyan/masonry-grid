@@ -1,9 +1,9 @@
 import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
-import Header from '../header'
-import { Loader } from '@/components/loader'
-import { Container } from "@/components/layout/styled.ts";
+// Internal
 import { useImages } from "@/providers/imagesProvider.tsx";
+import { Header, Loader } from '@/components'
+import { Container } from "./styled.ts";
 
 function Layout() {
   const { loading } = useImages()

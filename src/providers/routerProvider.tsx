@@ -6,9 +6,9 @@ import {
   type RouteProps,
   RouterProvider as NativeRouterProvider
 } from 'react-router-dom'
-import Layout from '@/components/layout'
+// Internals
+import { Layout, RootErrorBoundary } from '@/components'
 import ROUTE_PATHS from '@/utils/constants/routes'
-import { RootErrorBoundary } from '@/components/rootErrorBoundary'
 import App from '@/App'
 
 const Home = lazy(async () => await import('@/pages/home'))

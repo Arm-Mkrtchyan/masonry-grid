@@ -1,7 +1,8 @@
-import { useImages } from "@/providers/imagesProvider.tsx";
-import { PreviewImage } from "@/pages/imagePreview/styled.ts";
-import { Loader } from "@/components/loader";
 import { useState } from "react";
+// Internals
+import { useImages } from "@/providers/imagesProvider.tsx";
+import { Loader } from "@/components";
+import { PreviewImage } from "./styled.ts";
 
 function ImagePreview() {
   const { previewImage } = useImages()
