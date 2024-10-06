@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface PreviewImageProps {
   $background: string
+  $loading: boolean
 }
 
 export const PreviewImage = styled.div<PreviewImageProps>`
@@ -18,5 +19,7 @@ export const PreviewImage = styled.div<PreviewImageProps>`
         border-radius: 0.4rem;
         object-fit: contain;
         object-position: top;
+        opacity: ${(props: PreviewImageProps) => props.$loading ? '0' : '1'};
+        transition: opacity .2s;
     }
 `

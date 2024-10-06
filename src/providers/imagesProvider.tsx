@@ -1,14 +1,15 @@
 import {createContext, Dispatch, type ReactNode, SetStateAction, useContext, useEffect, useState} from 'react'
 import fetchData from "@/utils/fetchData";
-import {IMAGES_API, IMAGES_API_ENDPOINT} from "@/utils/constants";
-import {useNavigate, useParams} from "react-router-dom";
+import { IMAGES_API, IMAGES_API_ENDPOINT } from "@/utils/constants";
+import { useNavigate, useParams } from "react-router-dom";
 import { useDebounce } from "@/hooks";
+import { IImage } from "@/utils/types";
 
 export interface ImagesContextType {
-  imageList: any[]
+  imageList: IImage[]
   searchValue: '',
   setSearchValue: Dispatch<SetStateAction<string>>,
-  previewImage: any
+  previewImage: IImage | null
   loading: boolean
 }
 
@@ -22,10 +23,10 @@ export const ImagesContext = createContext<ImagesContextType>({
 
 export const ImagesProvider = ({children}: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true)
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState<IImage[]>([]);
   const [searchValue, setSearchValue] = useState<string>('');
   const debouncedSearchValue: string = useDebounce(searchValue, 800);
-  const [previewImage, setPreviewImage] = useState(null);
+  const [previewImage, setPreviewImage] = useState<IImage | null>(null);
   const { imageId } = useParams()
   const navigate = useNavigate()
   const handlePreviewImage = (imageId: string) => {
@@ -40,7 +41,7 @@ export const ImagesProvider = ({children}: { children: ReactNode }) => {
   const fetchImages = async (search?: string) => {
     setLoading(true)
     try {
-      let res: {photos: any[]}
+      let res: {photos: IImage[]}
       if(search) {
         res = await fetchData(`${IMAGES_API}${IMAGES_API_ENDPOINT.SEARCH}${search}`)
       } else {

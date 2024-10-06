@@ -5,8 +5,8 @@ import { Figure } from "@/components/imageItem/style.ts";
 interface IProps {
   src: string;
   alt: string;
-  width: string;
-  height: string;
+  width: number;
+  height: number;
   imageId: string
 }
 

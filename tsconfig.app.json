@@ -10,6 +10,8 @@
     "module": "ESNext",
     "skipLibCheck": true,
     /* Bundler mode */
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,

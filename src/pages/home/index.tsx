@@ -1,6 +1,7 @@
 import { useImages } from "@/providers/imagesProvider.tsx";
 import ImageItem from "@/components/imageItem";
 import { EmptyPage, ImagesContainer } from "./styled.ts";
+import { IImage } from '@/utils/types'
 
 function Home() {
   const { imageList, searchValue } = useImages()
@@ -12,7 +13,7 @@ function Home() {
             No images matched your search.
           </EmptyPage>
         : <ImagesContainer>
-          {imageList.map(img => (
+          {imageList.map((img: IImage) => (
             <ImageItem
               src={img.src.medium}
               imageId={img.id}
