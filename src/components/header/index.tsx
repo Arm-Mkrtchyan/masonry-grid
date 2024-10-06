@@ -18,7 +18,7 @@ const Header = () => {
 
   const handleBackToHome = () => navigate('/')
 
-  const handleChangeSearchValue = (e) => {
+  const handleChangeSearchValue = (e: any) => {
     setSearchValue(e.target.value)
   }
 

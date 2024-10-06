@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface PreviewImageProps {
-  $background: string
+  $background?: string
   $loading: boolean
 }
 
